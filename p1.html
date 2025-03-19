@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Find Month Name</title>
+</head>
+<body>
+  <input type="number" id="monthNumber" placeholder="Enter month number (1-12)">
+  <button onclick="findMonthName()">Find Month Name</button>
+  <p id="monthName"></p>
+
+  <script>
+    function findMonthName() {
+      const monthNumber = document.getElementById("monthNumber").value;
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+      if (monthNumber >= 1 && monthNumber <= 12) {
+        document.getElementById("monthName").textContent = months[monthNumber - 1];
+      } else {
+        document.getElementById("monthName").textContent = "Invalid month number. Please enter a number between 1 and 12.";
+      }
+    }
+  </script>
+</body>
+</html>
